@@ -1,12 +1,10 @@
-import NotesApp from "./components/NotesApp";
-import FetchTest from "./components/FetchTest";
 import "../src/App.css";
+import Entries from "./components/Entries";
 
 function App() {
   return (
     <>
-      <FetchTest />
-      <NotesApp />
+      <Entries />     
     </>
   )
 }
