@@ -10,7 +10,7 @@ export default function Entries(props){
 		setEntries(() => props.data);
 		setShownEntries(() => entries.map((item, index) => {
 			return(
-				<p key={index}>{item}</p>
+				<div key={index} className="card">{item}</div>
 			)
 		}));
 	}, [props]);
