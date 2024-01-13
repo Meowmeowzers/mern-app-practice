@@ -1,5 +1,6 @@
-import './styles/App.css'
+import './styles/App.css';
 import React from 'react';
+import Header from './components/Header';
 import Entries from './components/Entries';
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
 
   return (
     <>
-      {<Entries data={entries} />}
+      <Header />
+      <Entries data={entries} />
     </>
   )
 }

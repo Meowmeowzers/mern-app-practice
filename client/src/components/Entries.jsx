@@ -1,4 +1,5 @@
 import React from "react";
+import EntryCard from "./EntryCard";
 
 export default function Entries(props){
 	const [entries, setEntries] = React.useState([]);
@@ -10,15 +11,15 @@ export default function Entries(props){
 		setEntries(() => props.data);
 		setShownEntries(() => entries.map((item, index) => {
 			return(
-				<div key={index} className="card">{item}</div>
+				<EntryCard key={index} data={item}/>
 			)
 		}));
 	}, [props]);
 
 
 	return(
-		<>
-			<pre>{shownEntries}</pre>
-		</>
+		<div className="entries-container">
+			{shownEntries}
+		</div>
 	)
 }

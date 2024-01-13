@@ -1,12 +1,32 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem; */
   text-align: center;
 }
+*{
+  box-sizing: border-box;
+}
 
+.header{
+  width: 100%;
+}
+.entries-container{
+  display:flex;
+  place-content: flex-start stretch;
+  flex-flow: row wrap;
+  gap: 4px;
+  min-height: 100lvh;
+  width: 100%;
+  padding: 8px;
+  background-color: hsl(165, 100%, 80%);
+  border: 1px solid green;
+}
 .card{
-  background-color: aqua;
-	padding: 8px;
-	border: 1px solid white;
+  height: 200px;
+  width: 300px;
+  background-color: hsl(305, 100%, 50%);
+	border: 1px solid hsl(305, 100%, 30%);
+  border-radius: 8px;
+	padding: 4px;
 }
