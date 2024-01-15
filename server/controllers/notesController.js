@@ -1,4 +1,6 @@
 const asyncHandler = require("express-async-handler");
+const mongoose = require("mongoose");
+const entry = require("../models/entryModel");
 
 getNotes = asyncHandler(async(req, res) => {
 	res.status(200).json({
@@ -13,4 +15,13 @@ getNotes = asyncHandler(async(req, res) => {
 	console.log("Get");
 });
 
-module.exports = {getNotes};
+createNote = asyncHandler(async(req, res) => {
+	const newEntry = await entry.create({
+		title: "Test Note",
+		content: "Body",
+		author: "Me"
+	})
+	res.status(201).json(newEntry);
+})
+
+module.exports = {getNotes, createNote};
